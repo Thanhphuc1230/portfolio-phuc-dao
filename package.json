@@ -1,0 +1,36 @@
+{
+  "name": "portfolio-phuc-dao",
+  "version": "2.0.0",
+  "description": "Elite Developer Portfolio Landing Page for Đào Thanh Phúc (Phuc Dao) - Senior Full-Stack Laravel Engineer & Database Optimization Specialist.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thanhphucdao/portfolio-phuc-dao.git"
+  },
+  "author": "Dao Thanh Phuc <phucdao.dev@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^7.0.2",
+    "vite": "^6.1.0"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.4.7",
+    "lucide-react": "^0.475.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.0.1"
+  }
+}
