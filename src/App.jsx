@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ImpactMetrics from './components/ImpactMetrics';
 import CaseStudies from './components/CaseStudies';
+import FiverrGigsSection from './components/FiverrGigsSection';
 import SkillsMatrix from './components/SkillsMatrix';
 import ArchitecturePhilosophy from './components/ArchitecturePhilosophy';
 import TimelineSection from './components/TimelineSection';
@@ -12,11 +13,11 @@ import Footer from './components/Footer';
 import { Sparkles, Terminal } from 'lucide-react';
 
 export default function App() {
-  // Check hash or local storage for view selection; default to 'jack' as requested in latest prompt
+  // Default to Phuc Dao's portfolio
   const [activePortfolio, setActivePortfolio] = useState(() => {
     const hash = window.location.hash.toLowerCase();
-    if (hash.includes('phuc') || hash.includes('laravel')) return 'phuc';
-    return 'jack';
+    if (hash.includes('jack')) return 'jack';
+    return 'phuc';
   });
 
   useEffect(() => {
@@ -66,6 +67,7 @@ export default function App() {
             <Hero />
             <ImpactMetrics />
             <CaseStudies />
+            <FiverrGigsSection />
             <SkillsMatrix />
             <ArchitecturePhilosophy />
             <TimelineSection />

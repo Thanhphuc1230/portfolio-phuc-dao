@@ -17,6 +17,7 @@ export default function Navbar() {
     { name: 'About', href: '#about' },
     { name: 'Impact Metrics', href: '#impact' },
     { name: 'Case Studies', href: '#case-studies' },
+    { name: 'Fiverr Gigs', href: '#services-gigs' },
     { name: 'Skills Matrix', href: '#skills' },
     { name: 'Architecture', href: '#architecture' },
     { name: 'Timeline', href: '#timeline' },

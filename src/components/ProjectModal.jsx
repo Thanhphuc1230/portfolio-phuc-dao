@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
-import { X, ExternalLink, CheckCircle2, ShieldCheck, Cpu, Database, Server, Layers } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { X, ExternalLink, CheckCircle2, Image as ImageIcon, ShieldCheck } from 'lucide-react';
 
 export default function ProjectModal({ project, onClose }) {
+  const [activeImage, setActiveImage] = useState('main');
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') onClose();
@@ -25,7 +27,7 @@ export default function ProjectModal({ project, onClose }) {
       />
 
       {/* Modal Dialog */}
-      <div className="relative w-full max-w-3xl bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden z-10 my-8">
+      <div className="relative w-full max-w-4xl bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden z-10 my-8">
         
         {/* Header Bar */}
         <div className="px-6 py-4 bg-slate-950/80 border-b border-slate-800 flex items-center justify-between">
@@ -50,6 +52,49 @@ export default function ProjectModal({ project, onClose }) {
             <p className="text-xs text-slate-400 font-mono">
               Role: <span className="text-slate-200">{project.role}</span> | {project.scope}
             </p>
+          </div>
+
+          {/* Visual Proof Screenshots Switcher */}
+          <div className="space-y-3">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
+                <ImageIcon className="w-3.5 h-3.5 text-cyan-400" />
+                <span>Production Proof Visuals</span>
+              </span>
+              {project.adminImage && (
+                <div className="flex items-center gap-1.5 bg-slate-950 p-1 rounded-lg border border-slate-800 text-xs font-mono">
+                  <button
+                    onClick={() => setActiveImage('main')}
+                    className={`px-3 py-1 rounded-md transition-all ${
+                      activeImage === 'main'
+                        ? 'bg-cyan-500 text-slate-950 font-bold shadow'
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    Main Platform
+                  </button>
+                  <button
+                    onClick={() => setActiveImage('admin')}
+                    className={`px-3 py-1 rounded-md transition-all ${
+                      activeImage === 'admin'
+                        ? 'bg-cyan-500 text-slate-950 font-bold shadow'
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    Admin CMS & Analytics
+                  </button>
+                </div>
+              )}
+            </div>
+
+            <div className="relative rounded-xl overflow-hidden border border-slate-800 bg-slate-950 max-h-[360px] flex items-center justify-center">
+              <img
+                src={activeImage === 'main' ? project.image : project.adminImage}
+                alt={`${project.title} proof preview`}
+                className="w-full h-auto max-h-[360px] object-cover object-top"
+                loading="lazy"
+              />
+            </div>
           </div>
 
           {/* Performance Proof Metrics */}
@@ -116,7 +161,10 @@ export default function ProjectModal({ project, onClose }) {
 
         {/* Modal Footer */}
         <div className="px-6 py-4 bg-slate-950/90 border-t border-slate-800 flex items-center justify-between">
-          <span className="text-xs text-slate-400 font-mono">Live verified system</span>
+          <span className="text-xs text-slate-400 font-mono flex items-center gap-1.5">
+            <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+            <span>Verified Production Delivery</span>
+          </span>
           <div className="flex items-center gap-3">
             <button
               onClick={onClose}
