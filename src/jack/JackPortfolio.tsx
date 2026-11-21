@@ -4,10 +4,11 @@ import { MarqueeSection } from './sections/MarqueeSection';
 import { AboutSection } from './sections/AboutSection';
 import { ServicesSection } from './sections/ServicesSection';
 import { ProjectsSection } from './sections/ProjectsSection';
+import { ContactAndFooterSection } from './sections/ContactAndFooterSection';
 
 export const JackPortfolio: React.FC = () => {
   useEffect(() => {
-    document.title = 'Jack -- 3D Creator';
+    document.title = 'Đào Thanh Phúc (Phuc Dao) — Senior Full-Stack Laravel Engineer & Database Optimization Specialist';
   }, []);
 
   return (
@@ -23,6 +24,7 @@ export const JackPortfolio: React.FC = () => {
       <AboutSection />
       <ServicesSection />
       <ProjectsSection />
+      <ContactAndFooterSection />
     </div>
   );
 };

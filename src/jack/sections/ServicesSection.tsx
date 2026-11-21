@@ -6,37 +6,38 @@ const services: ServiceItem[] = [
   {
     id: '01',
     number: '01',
-    name: '3D Modeling',
+    name: 'Legacy System Migration to Laravel',
+    badge: 'High-Value Architecture',
+    pricing: 'Starting $150 – $1,200+',
     description:
-      'Creation of detailed objects, characters, or environments tailored to specific client needs, ideal for games, products, and visualizations.',
+      'Seamless end-to-end migration from legacy .NET, CodeIgniter 3, or native PHP 7.x to cutting-edge Laravel 12. Guaranteed 100% SEO URL slug preservation, zero Google Ads disruption, and zero-loss database ETL.',
   },
   {
     id: '02',
     number: '02',
-    name: 'Rendering',
+    name: 'Bug Fixing & PHP 8.2/8.3 Upgrade',
+    badge: 'Fast Turnaround',
+    pricing: 'Starting $30 – $150',
     description:
-      'High-quality, photorealistic renders that showcase designs with custom lighting, textures, and materials to bring concepts to life.',
+      'Rapid surgical debugging for breaking PHP 8.2/8.3 deprecations, slow query deadlocks, relational N+1 query bottlenecks, Redis queue worker crashes, and complex RBAC authorization errors.',
   },
   {
     id: '03',
     number: '03',
-    name: 'Motion Design',
+    name: 'Speed, TTFB & Core Web Vitals 90+',
+    badge: 'Performance Specialist',
+    pricing: 'Starting $50 – $250',
     description:
-      'Dynamic animations and motion graphics that add energy and storytelling to brands, products, and digital experiences.',
+      'Slashing server TTFB from 820ms down to 140ms via Redis Cache-Aside, automated Next-Gen WebP image pipelines (cutting 75% payload), query profiling, and Cloudflare HTTP/3 (QUIC) edge caching.',
   },
   {
     id: '04',
     number: '04',
-    name: 'Branding',
+    name: 'Custom Admin CMS & Enterprise Dashboards',
+    badge: 'Full Product Delivery',
+    pricing: 'Starting $150 – $600+',
     description:
-      'Crafting cohesive visual identities -- from logos to full brand systems -- that communicate a clear and memorable presence.',
-  },
-  {
-    id: '05',
-    number: '05',
-    name: 'Web Design',
-    description:
-      'Designing clean, modern, and conversion-focused websites with attention to layout, typography, and user experience.',
+      'Bespoke Admin CRUD platforms replacing fragile FTP code editing. Equipped with 118-permission RBAC, high-throughput background Excel/CSV imports, media managers, and audit logs.',
   },
 ];
 
@@ -50,15 +51,20 @@ export const ServicesSection: React.FC = () => {
         
         {/* Section Heading */}
         <FadeIn delay={0} y={40}>
-          <h2
-            className="text-[#0C0C0C] font-black uppercase text-center leading-none tracking-tight mb-16 sm:mb-20 md:mb-28"
-            style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
-          >
-            Services
-          </h2>
+          <div className="text-center mb-16 sm:mb-20 md:mb-24">
+            <span className="text-xs font-mono font-bold tracking-widest uppercase text-slate-500 mb-2 block">
+              Contract & Freelance Deliverables
+            </span>
+            <h2
+              className="text-[#0C0C0C] font-black uppercase leading-none tracking-tight"
+              style={{ fontSize: 'clamp(3rem, 11vw, 150px)' }}
+            >
+              Services
+            </h2>
+          </div>
         </FadeIn>
 
-        {/* Vertical List of 5 Service Items */}
+        {/* Vertical List of 4 Services */}
         <div className="w-full border-t border-[rgba(12,12,12,0.15)]">
           {services.map((service, index) => (
             <FadeIn
@@ -72,22 +78,28 @@ export const ServicesSection: React.FC = () => {
                 {/* Left: Huge Number */}
                 <span
                   className="font-black text-[#0C0C0C] leading-none shrink-0"
-                  style={{ fontSize: 'clamp(3rem, 10vw, 140px)' }}
+                  style={{ fontSize: 'clamp(3rem, 9vw, 120px)' }}
                 >
                   {service.number}
                 </span>
 
                 {/* Right: Name + Description stacked vertically */}
                 <div className="flex flex-col gap-2 max-w-2xl w-full">
-                  <h3
-                    className="font-medium uppercase text-[#0C0C0C] tracking-wide"
-                    style={{ fontSize: 'clamp(1rem, 2.2vw, 2.1rem)' }}
-                  >
-                    {service.name}
-                  </h3>
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <h3
+                      className="font-medium uppercase text-[#0C0C0C] tracking-wide"
+                      style={{ fontSize: 'clamp(1rem, 2vw, 1.8rem)' }}
+                    >
+                      {service.name}
+                    </h3>
+                    <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
+                      {service.pricing}
+                    </span>
+                  </div>
+
                   <p
-                    className="font-light leading-relaxed text-[#0C0C0C] opacity-60"
-                    style={{ fontSize: 'clamp(0.85rem, 1.6vw, 1.25rem)' }}
+                    className="font-light leading-relaxed text-[#0C0C0C] opacity-70"
+                    style={{ fontSize: 'clamp(0.85rem, 1.4vw, 1.15rem)' }}
                   >
                     {service.description}
                   </p>

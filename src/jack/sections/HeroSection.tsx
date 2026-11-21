@@ -19,42 +19,48 @@ export const HeroSection: React.FC = () => {
         <nav className="flex justify-between items-center w-full px-6 md:px-10 pt-6 md:pt-8">
           <button
             onClick={() => scrollTo('about')}
-            className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.4rem] transition-opacity duration-200 hover:opacity-70 cursor-pointer"
+            className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.3rem] transition-opacity duration-200 hover:opacity-70 cursor-pointer"
           >
             About
           </button>
           <button
             onClick={() => scrollTo('services')}
-            className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.4rem] transition-opacity duration-200 hover:opacity-70 cursor-pointer"
+            className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.3rem] transition-opacity duration-200 hover:opacity-70 cursor-pointer"
           >
-            Price
+            Services
           </button>
           <button
             onClick={() => scrollTo('projects')}
-            className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.4rem] transition-opacity duration-200 hover:opacity-70 cursor-pointer"
+            className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.3rem] transition-opacity duration-200 hover:opacity-70 cursor-pointer"
           >
             Projects
           </button>
           <button
-            onClick={() => scrollTo('about')}
-            className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.4rem] transition-opacity duration-200 hover:opacity-70 cursor-pointer"
+            onClick={() => scrollTo('credentials')}
+            className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.3rem] transition-opacity duration-200 hover:opacity-70 cursor-pointer"
+          >
+            Credentials
+          </button>
+          <button
+            onClick={() => scrollTo('contact')}
+            className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.3rem] transition-opacity duration-200 hover:opacity-70 cursor-pointer"
           >
             Contact
           </button>
         </nav>
       </FadeIn>
 
-      {/* Hero Heading */}
+      {/* Hero Heading - Dao Thanh Phuc */}
       <div className="w-full overflow-hidden text-center z-0">
         <FadeIn delay={0.15} y={40}>
-          <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[14vw] sm:text-[15vw] md:text-[16vw] lg:text-[17.5vw] mt-6 sm:mt-4 md:-mt-5">
-            Hi, i&apos;m jack
+          <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[11vw] sm:text-[12vw] md:text-[13vw] lg:text-[14.5vw] mt-6 sm:mt-4 md:-mt-5">
+            Hi, i&apos;m phuc dao
           </h1>
         </FadeIn>
       </div>
 
-      {/* Hero Portrait with Magnet */}
-      <div className="absolute left-1/2 -translate-x-1/2 z-10 w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px] top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 pointer-events-auto">
+      {/* Hero 3D Centerpiece with Magnet Effect */}
+      <div className="absolute left-1/2 -translate-x-1/2 z-10 w-[260px] sm:w-[340px] md:w-[420px] lg:w-[480px] top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 pointer-events-auto">
         <FadeIn delay={0.6} y={30} className="w-full h-full flex justify-center">
           <Magnet
             padding={150}
@@ -63,12 +69,18 @@ export const HeroSection: React.FC = () => {
             inactiveTransition="transform 0.6s ease-in-out"
             className="w-full"
           >
-            <img
-              src="https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png"
-              alt="Jack - 3D Creator Portrait"
-              className="w-full h-auto object-contain pointer-events-none drop-shadow-2xl"
-              loading="eager"
-            />
+            <div className="relative group cursor-pointer">
+              <img
+                src="https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png"
+                alt="Phuc Dao - Full Stack Laravel Architect"
+                className="w-full h-auto object-contain pointer-events-none drop-shadow-2xl"
+                loading="eager"
+              />
+              {/* Subtle Tech Badge Overlay */}
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-slate-900/90 border border-slate-700/80 px-4 py-1.5 rounded-full backdrop-blur-md text-[11px] font-mono text-cyan-400 whitespace-nowrap shadow-xl">
+                Laravel 12 • Database Architect
+              </div>
+            </div>
           </Magnet>
         </FadeIn>
       </div>
@@ -76,16 +88,21 @@ export const HeroSection: React.FC = () => {
       {/* Bottom Bar */}
       <div className="w-full flex justify-between items-end pb-7 sm:pb-8 md:pb-10 px-6 md:px-10 z-20 mt-auto">
         <FadeIn delay={0.35} y={20}>
-          <p
-            className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[160px] sm:max-w-[220px] md:max-w-[260px]"
-            style={{ fontSize: 'clamp(0.75rem, 1.4vw, 1.5rem)' }}
-          >
-            a 3d creator driven by crafting striking and unforgettable projects
-          </p>
+          <div className="flex flex-col gap-1 max-w-[200px] sm:max-w-[280px] md:max-w-[340px]">
+            <span className="text-[10px] font-mono uppercase tracking-widest text-emerald-400 font-semibold">
+              Available for Global Projects & Gigs
+            </span>
+            <p
+              className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug"
+              style={{ fontSize: 'clamp(0.75rem, 1.3vw, 1.35rem)' }}
+            >
+              A Full-Stack Laravel Architect driven by slashing database bottlenecks & zero-downtime legacy migrations
+            </p>
+          </div>
         </FadeIn>
 
         <FadeIn delay={0.5} y={20}>
-          <ContactButton onClick={() => scrollTo('about')} />
+          <ContactButton onClick={() => scrollTo('contact')} />
         </FadeIn>
       </div>
 

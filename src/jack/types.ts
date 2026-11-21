@@ -3,6 +3,8 @@ export interface ServiceItem {
   number: string;
   name: string;
   description: string;
+  badge?: string;
+  pricing?: string;
 }
 
 export interface ProjectItem {
@@ -14,4 +16,6 @@ export interface ProjectItem {
   col1BottomImage: string;
   col2Image: string;
   liveUrl?: string;
+  metricsBadge?: string;
+  highlights?: string[];
 }
