@@ -15,7 +15,7 @@ export const JackPortfolio: React.FC = () => {
     <div
       className="bg-[#0C0C0C] text-[#D7E2EA] min-h-screen w-full relative"
       style={{
-        fontFamily: "'Kanit', sans-serif",
+        fontFamily: "'Be Vietnam Pro', sans-serif",
         overflowX: 'clip',
       }}
     >
