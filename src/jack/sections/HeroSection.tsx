@@ -24,10 +24,10 @@ export const HeroSection: React.FC = () => {
             About
           </button>
           <button
-            onClick={() => scrollTo('services')}
+            onClick={() => scrollTo('experience')}
             className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.3rem] transition-opacity duration-200 hover:opacity-70 cursor-pointer"
           >
-            Services
+            Experience
           </button>
           <button
             onClick={() => scrollTo('projects')}
@@ -90,7 +90,7 @@ export const HeroSection: React.FC = () => {
         <FadeIn delay={0.35} y={20}>
           <div className="flex flex-col gap-1 max-w-[200px] sm:max-w-[280px] md:max-w-[340px]">
             <span className="text-[10px] font-mono uppercase tracking-widest text-emerald-400 font-semibold">
-              Available for Global Projects & Gigs
+              Senior Full-Stack Laravel Engineer • Ho Chi Minh City
             </span>
             <p
               className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug"

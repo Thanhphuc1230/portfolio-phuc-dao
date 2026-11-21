@@ -69,13 +69,13 @@ export const ContactAndFooterSection: React.FC = () => {
           <div className="p-8 sm:p-12 rounded-[35px] bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 border-2 border-slate-800 flex flex-col md:flex-row items-center justify-between gap-8 mb-16 shadow-2xl">
             <div className="max-w-xl text-center md:text-left">
               <span className="text-xs font-mono font-bold uppercase tracking-widest text-cyan-400 mb-2 block">
-                Direct Collaboration & Hire
+                Engineering Roles & Consultation
               </span>
               <h3 className="text-2xl sm:text-4xl font-black text-white uppercase tracking-tight mb-3">
-                Have a Mission-Critical Project?
+                Let&apos;s Build Something Resilient
               </h3>
               <p className="text-sm text-slate-300 font-light leading-relaxed">
-                Whether you need a full legacy migration to Laravel 12, slow query profiling, or sub-second TTFB optimization, let&apos;s build it right.
+                Available for Senior Full-Stack Engineering roles, legacy architecture modernization to Laravel 12, and high-concurrency database optimizations.
               </p>
             </div>
 
@@ -100,38 +100,28 @@ export const ContactAndFooterSection: React.FC = () => {
         </FadeIn>
 
         {/* Platform Links */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-12">
           <a
             href={profileData.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-slate-700 text-center text-xs font-mono text-slate-300 hover:text-white transition-colors"
+            className="p-3.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-cyan-500/50 text-center text-xs font-mono text-slate-300 hover:text-white transition-colors"
           >
-            GitHub Profile
+            GitHub: github.com/thanhphucdao
           </a>
           <a
             href={profileData.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-slate-700 text-center text-xs font-mono text-slate-300 hover:text-white transition-colors"
+            className="p-3.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-cyan-500/50 text-center text-xs font-mono text-slate-300 hover:text-white transition-colors"
           >
             LinkedIn Profile
           </a>
           <a
-            href="https://www.upwork.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-slate-700 text-center text-xs font-mono text-slate-300 hover:text-white transition-colors"
+            href={`mailto:${profileData.email}`}
+            className="p-3.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-cyan-500/50 text-center text-xs font-mono text-cyan-400 hover:text-cyan-300 transition-colors"
           >
-            Upwork Profile
-          </a>
-          <a
-            href="https://www.fiverr.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-slate-700 text-center text-xs font-mono text-slate-300 hover:text-white transition-colors"
-          >
-            Fiverr Gigs
+            Direct: {profileData.email}
           </a>
         </div>
 

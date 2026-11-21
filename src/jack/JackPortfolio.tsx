@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { HeroSection } from './sections/HeroSection';
 import { MarqueeSection } from './sections/MarqueeSection';
 import { AboutSection } from './sections/AboutSection';
-import { ServicesSection } from './sections/ServicesSection';
+import { ExperienceSection } from './sections/ExperienceSection';
 import { ProjectsSection } from './sections/ProjectsSection';
 import { ContactAndFooterSection } from './sections/ContactAndFooterSection';
 
@@ -22,7 +22,7 @@ export const JackPortfolio: React.FC = () => {
       <HeroSection />
       <MarqueeSection />
       <AboutSection />
-      <ServicesSection />
+      <ExperienceSection />
       <ProjectsSection />
       <ContactAndFooterSection />
     </div>
